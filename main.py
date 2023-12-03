@@ -27,34 +27,34 @@ def test_bucketing_by_health():
   assert(counts["failed"] == 1)
   print("Done counting :)")
 #making all efficient:upper boundry
-  present_capacities = [120,120,120,120]
-  counts = count_batteries_by_health(present_capacities)
-  assert(counts["healthy"] == 4)
-  assert(counts["exchange"] == 0)
-  assert(counts["failed"] == 0)
+  present_capacities_1 = [120,120,120,120]
+  counts_1 = count_batteries_by_health(present_capacities_1)
+  assert(counts_1["healthy"] == 4)
+  assert(counts_1["exchange"] == 0)
+  assert(counts_!["failed"] == 0)
   print("Done counting :)")
 #giving empty list:null
-  present_capacities = []
-  counts = count_batteries_by_health(present_capacities)
-  assert(counts["healthy"] == 0)
-  assert(counts["exchange"] == 0)
-  assert(counts["failed"] == 0)
+  present_capacities_2 = []
+  counts_2 = count_batteries_by_health(present_capacities_2)
+  assert(counts_2["healthy"] == 0)
+  assert(counts_2["exchange"] == 0)
+  assert(counts_2["failed"] == 0)
   print("Done counting :)")
 
 #giving float values:typecast
-  present_capacities = [113.4, 116.12, 80.00, 95.1, 92, 70.3]
-  counts = count_batteries_by_health(present_capacities)
-  assert(counts["healthy"] == 2)
-  assert(counts["exchange"] == 3)
-  assert(counts["failed"] == 1)
+  present_capacities_3 = [113.4, 116.12, 80.00, 95.1, 92, 70.3]
+  counts_3 = count_batteries_by_health(present_capacities_3)
+  assert(counts_3["healthy"] == 2)
+  assert(counts_3["exchange"] == 3)
+  assert(counts_3["failed"] == 1)
   print("Done counting :)")
 
 #all minimum health:lower boundry
-  present_capacities = [0,0,0,0]
-  counts = count_batteries_by_health(present_capacities)
-  assert(counts["healthy"] == 0)
-  assert(counts["exchange"] == 0)
-  assert(counts["failed"] == 4)
+  present_capacities_4 = [0,0,0,0]
+  counts_4 = count_batteries_by_health(present_capacities_4)
+  assert(counts_4["healthy"] == 0)
+  assert(counts_4["exchange"] == 0)
+  assert(counts_4["failed"] == 4)
   print("Done counting :)")
 
 
